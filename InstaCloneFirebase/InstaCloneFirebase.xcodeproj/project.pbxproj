@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8286B6C07415534247B4EF40 /* Pods_InstaCloneFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490651084D4CA9FECD085A68 /* Pods_InstaCloneFirebase.framework */; };
+		C406BA812A94CCEF005B6825 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C406BA802A94CCEF005B6825 /* SettingsViewController.swift */; };
+		C406BA832A94CD02005B6825 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C406BA822A94CD02005B6825 /* FeedViewController.swift */; };
+		C406BA852A94CD0D005B6825 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C406BA842A94CD0D005B6825 /* UploadViewController.swift */; };
 		C4C2BC8A2A939AB400808F3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C2BC892A939AB400808F3D /* AppDelegate.swift */; };
 		C4C2BC8C2A939AB400808F3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C2BC8B2A939AB400808F3D /* SceneDelegate.swift */; };
 		C4C2BC8E2A939AB400808F3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C2BC8D2A939AB400808F3D /* ViewController.swift */; };
@@ -21,6 +24,9 @@
 		490651084D4CA9FECD085A68 /* Pods_InstaCloneFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaCloneFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55870C6AA8686AC8C807D665 /* Pods-InstaCloneFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaCloneFirebase.release.xcconfig"; path = "Target Support Files/Pods-InstaCloneFirebase/Pods-InstaCloneFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		82C98BB980F3A397038B0708 /* Pods-InstaCloneFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaCloneFirebase.debug.xcconfig"; path = "Target Support Files/Pods-InstaCloneFirebase/Pods-InstaCloneFirebase.debug.xcconfig"; sourceTree = "<group>"; };
+		C406BA802A94CCEF005B6825 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C406BA822A94CD02005B6825 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		C406BA842A94CD0D005B6825 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		C4C2BC862A939AB400808F3D /* InstaCloneFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaCloneFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C2BC892A939AB400808F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4C2BC8B2A939AB400808F3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +56,6 @@
 				82C98BB980F3A397038B0708 /* Pods-InstaCloneFirebase.debug.xcconfig */,
 				55870C6AA8686AC8C807D665 /* Pods-InstaCloneFirebase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -78,6 +83,9 @@
 				C4C2BC892A939AB400808F3D /* AppDelegate.swift */,
 				C4C2BC8B2A939AB400808F3D /* SceneDelegate.swift */,
 				C4C2BC8D2A939AB400808F3D /* ViewController.swift */,
+				C406BA802A94CCEF005B6825 /* SettingsViewController.swift */,
+				C406BA822A94CD02005B6825 /* FeedViewController.swift */,
+				C406BA842A94CD0D005B6825 /* UploadViewController.swift */,
 				C4C2BC8F2A939AB400808F3D /* Main.storyboard */,
 				C4C2BC922A939AB600808F3D /* Assets.xcassets */,
 				C4C2BC942A939AB600808F3D /* LaunchScreen.storyboard */,
@@ -212,8 +220,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4C2BC8E2A939AB400808F3D /* ViewController.swift in Sources */,
+				C406BA852A94CD0D005B6825 /* UploadViewController.swift in Sources */,
 				C4C2BC8A2A939AB400808F3D /* AppDelegate.swift in Sources */,
+				C406BA832A94CD02005B6825 /* FeedViewController.swift in Sources */,
 				C4C2BC8C2A939AB400808F3D /* SceneDelegate.swift in Sources */,
+				C406BA812A94CCEF005B6825 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
