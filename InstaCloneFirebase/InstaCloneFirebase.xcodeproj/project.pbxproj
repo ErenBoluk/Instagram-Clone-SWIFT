@@ -13,6 +13,7 @@
 		C4C2BC912A939AB400808F3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4C2BC8F2A939AB400808F3D /* Main.storyboard */; };
 		C4C2BC932A939AB600808F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4C2BC922A939AB600808F3D /* Assets.xcassets */; };
 		C4C2BC962A939AB600808F3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4C2BC942A939AB600808F3D /* LaunchScreen.storyboard */; };
+		C4C2BC9E2A94B4F000808F3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4C2BC9D2A94B4F000808F3D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C4C2BC922A939AB600808F3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4C2BC952A939AB600808F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4C2BC972A939AB600808F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4C2BC9D2A94B4F000808F3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C4C2BC922A939AB600808F3D /* Assets.xcassets */,
 				C4C2BC942A939AB600808F3D /* LaunchScreen.storyboard */,
 				C4C2BC972A939AB600808F3D /* Info.plist */,
+				C4C2BC9D2A94B4F000808F3D /* GoogleService-Info.plist */,
 			);
 			path = InstaCloneFirebase;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4C2BC962A939AB600808F3D /* LaunchScreen.storyboard in Resources */,
+				C4C2BC9E2A94B4F000808F3D /* GoogleService-Info.plist in Resources */,
 				C4C2BC932A939AB600808F3D /* Assets.xcassets in Resources */,
 				C4C2BC912A939AB400808F3D /* Main.storyboard in Resources */,
 			);
