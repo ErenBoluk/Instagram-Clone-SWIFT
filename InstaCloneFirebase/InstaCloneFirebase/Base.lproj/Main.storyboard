@@ -15,14 +15,49 @@
                     <view key="view" contentMode="scaleToFill" id="l12-Ai-9Q6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bf6-UA-g6B">
+                                <rect key="frame" x="59" y="517" width="275" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pB-al-D4d">
+                                <rect key="frame" x="59" y="493" width="70" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share İmage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beX-NV-VI2">
+                                <rect key="frame" x="59" y="82" width="275" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wh5-8c-pal">
+                                <rect key="frame" x="123" y="618" width="147" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Share"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="select-image" translatesAutoresizingMaskIntoConstraints="NO" id="x1f-cz-Sag">
+                                <rect key="frame" x="59" y="157" width="275" height="301"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="IJB-Dy-IH6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="u.circle.fill" catalog="system" id="ret-iP-END"/>
+                    <connections>
+                        <outlet property="image" destination="x1f-cz-Sag" id="6Q7-ca-YxG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYh-RW-FYq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-558" y="184"/>
+            <point key="canvasLocation" x="-558.01526717557249" y="183.80281690140845"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Lk9-xx-1ys">
@@ -52,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mK3-Kv-Glu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1553" y="680"/>
+            <point key="canvasLocation" x="-1553" y="671"/>
         </scene>
         <!--Feed-->
         <scene sceneID="MeD-WM-DaY">
@@ -73,7 +108,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ETb-U2-6fF">
             <objects>
-                <tabBarController id="eD5-q2-985" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="eD5-q2-985" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="o98-hh-HNQ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HUm-F3-5nJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -158,6 +193,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailText" destination="8LB-AI-BNn" id="IQV-5Q-GDY"/>
+                        <outlet property="passwordText" destination="j1e-kk-63x" id="WVF-2T-CFV"/>
                         <segue destination="eD5-q2-985" kind="presentation" identifier="toFeedVC" modalPresentationStyle="fullScreen" id="bCm-BO-lTE"/>
                     </connections>
                 </viewController>
@@ -169,6 +206,7 @@
     <resources>
         <image name="f.circle.fill" catalog="system" width="128" height="123"/>
         <image name="s.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="select-image" width="550" height="600"/>
         <image name="u.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

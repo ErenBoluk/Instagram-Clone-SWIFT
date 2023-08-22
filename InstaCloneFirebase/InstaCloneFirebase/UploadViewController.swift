@@ -7,13 +7,14 @@
 
 import UIKit
 
-class UploadViewController: UIViewController {
+class UploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
+    @IBOutlet weak var image: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+       
     }
-    
 
 }
