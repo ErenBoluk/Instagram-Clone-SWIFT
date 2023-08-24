@@ -1,22 +1,23 @@
-# Swift Instagram Clone App
+# Swift Instagram Clone Uygulaması
 
+Bu uygulama, Instagram'ın temel özelliklerini içeren bir özgün geliştirme örneği ve Firebase kullanımını sergilemektedir.
 
-This application is an example of self-improvement and Firebase usage that incorporates the fundamental features of Instagram.
-
-## Technologies Used
-
-- Swift
-- SdWebImage
-- Firebase - Firestore - FireAuth
-
-<hr>
-
-# Swift Instagram Clone App
-
-Bu uygulama, instagramin temel özelliklerini barındıran bir kendini geliştirme ve firebase kullanım örneğidir.
+> This application is an original development example that includes the core features of Instagram and demonstrates the usage of Firebase.
 
 ## Kullanılan Teknolojiler
 
 - Swift
 - SdWebImage
-- Firebase - Firestore - FireAuth
+- Firebase (Firestore ve FireAuth)
+
+---
+
+## Uygulama İçi Görüntüler
+
+### Giriş Yap & Kaydol Sayfası || Paylaşım Sayfası
+
+<img src="https://i.hizliresim.com/pvklaqx.png" width="250"> <img src="https://i.hizliresim.com/6aw4sfx.png" width="250">
+
+### Akış Sayfası || Ayarlar Sayfası
+
+<img src="https://i.hizliresim.com/ramfrkr.png" width="250"> <img src="https://i.hizliresim.com/lzqxifg.png" width="250">
