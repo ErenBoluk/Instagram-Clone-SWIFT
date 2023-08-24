@@ -40,6 +40,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.userImageView.image = UIImage(named: "select-image.png")
         cell.userImageView.sd_setImage(with: URL(string: post.imageUrl))
         cell.userEmailLabel.text = post.user
+        cell.postId.text = post.postId
+        
+      
+       
         
         return cell
     }
@@ -51,7 +55,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         print("SETTING")
         //  print(settings)
-        firestore.collection("Posts").addSnapshotListener { snapshot, err in
+        firestore.collection("Posts")
+            .order(by: "date", descending: true)
+            .addSnapshotListener { snapshot, err in
             if err != nil{
                 print("err @-1")
             }else{
@@ -59,7 +65,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let datas = snapshot?.documents
                     self.postArray = []
                     for data in datas!  {
-                        let docId = data.documentID as! String
+                        let docId = data.documentID 
                         let image = data.get("imageUrl") as! String
                         let user = data.get("user") as! String
                         let desc = data.get("description") as! String

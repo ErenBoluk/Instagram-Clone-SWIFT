@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class FeedCell: UITableViewCell {
 
@@ -14,6 +15,7 @@ class FeedCell: UITableViewCell {
     
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userEmailLabel: UILabel!
+    @IBOutlet weak var postId: UILabel!
     
     var lastTapTime: Date?
     override func awakeFromNib() {
@@ -31,34 +33,69 @@ class FeedCell: UITableViewCell {
 
     }
     @objc func likeGestureRecFunc() {
-        likeFunc()
+            startHeartAnimation()
     }
     @IBAction func likeAction(_ sender: Any) {
-        likeFunc()
+        increaseLikeToFirebase()
     }
-    func likeFunc(){
-        startHeartAnimation()
+    
+    func increaseLikeToFirebase() {
+        let postId = postId.text!
+        
+        let firestoreDb = Firestore.firestore()
+        
+        firestoreDb.collection("Posts").document(postId).getDocument { doc, err in
+            if err == nil{
+                if let likeCount = doc?.get("like") as? Int {
+                    let likeStore = ["like" : likeCount + 1 ] as! [String : Any]
+                    firestoreDb.collection("Posts")
+                        .document(postId)
+                        .setData(likeStore,merge: true)
+                }
+                
+            }else{
+                print("Like Error : \(String(describing: err?.localizedDescription))")
+            }
+        }
+        
+        
+        
     }
+    
+    
     func startHeartAnimation() {
-        
         let now = Date()
-            // Eğer lastTapTime değeri nil değilse ve son tıklama ile arasındaki zaman farkı 1 saniyeden az ise
-            if let lastTapTime = lastTapTime, now.timeIntervalSince(lastTapTime) < 1 {
-        
+            
+            // Time check
+        if let lastTapTime = lastTapTime, now.timeIntervalSince(lastTapTime) < 1 {
+            
+            
+
         let heartImageView = UIImageView(image: UIImage(named: "heart.png"))
-        heartImageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50) // İkona uygun boyut ve konum ayarlayın
-        heartImageView.center = self.center
-        self.addSubview(heartImageView)
+        heartImageView.frame = CGRect(x: 0, y: 0, width: 75, height: 75) // Icon size
+        heartImageView.center = contentView.center
+        contentView.addSubview(heartImageView)
+
+            
+            
+        likeLabel.text = String(Int(likeLabel.text!)! + 1)
         UIView.animate(withDuration: 1.0, animations: {
             heartImageView.alpha = 0.0
-            // İstediğiniz diğer animasyon değişikliklerini ekleyebilirsiniz
         }) { _ in
             heartImageView.removeFromSuperview()
+            self.increaseLikeToFirebase()
         }
-                
-            }
-            lastTapTime = now
+        
+            
+            
+        
+            
+          
+        } // end if
+        
+        lastTapTime = now
     }
+
 
 
 
